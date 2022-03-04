@@ -1,5 +1,57 @@
 # FAQ
 
+## What is ReproSchema
+ReproSchema is a ([ReproNim](https://www.repronim.org/)) project that seeks to solve a set of problems around the collection of large, publicly available clinical and bahavioral datasets (e.g. from assessments on anxiety, psychosis, bipolar, etc.) sourced from multplie studies and projects in one or more laboratory. 
+
+## What challenges is ReproSchema trying to solve?
+- Curation of data for your laboratory or a community of laboratories. This is challenging because it requires a knowledge of various assesments, standards, schemas, etc. Furthermore, it can be important to understand the intent of a protcol or assessment, which affects how to look at data from different studies performed by other laboratories
+- Standards and ontologies for assessments change over time for various reasons. These can be difficult to keep up with and understand.
+- Assessments are not collectd in a public library, making standardization difficult
+- Provenance. When you have a speadsheet of data from another laboratory, information is lost - data collection machine, intent behind specific question represented by a column of data, exact assement form that was used, etc. We also lose connection to the data collection plan since all we have is the data collected without context
+- Extensibility. New assesments, sensors, and use-cases crop up requiring change or modifications to existing assesments. Rectifying this with requirements from existing studies can be messy.
+
+
+## Why should I use Reproschema?
+The above challenges are important to the overall enterprise, especially as we try to answer questions that benefit from larger and larger datasets (e.g. to find smaller effects). By participating in these data harmonization initiatives, we enable each other to do more powerful, reproduceable science. 
+
+
+## What are the key elements of ReproSchema?
+
+ReproSchema:
+- A graph model for encoding data collection protocols and activities
+- Uses Linked Data principals to provide persistent URLs, track provenance, and harmonize prior to collection instead of trying to do so after-the-fact
+- Provides a validation schema to ensure data collection/data are in the right structure early
+
+ReproSchema Library:
+- The clinical and behavioral assessments
+- Can be versioned and tracked on GitHub
+- Enables creation of your own protocols
+
+ReproSchema UI
+- The UI for ReproSchema forms
+- Enables client-side data collection
+- Data is only shared with the server if the client gives permission and the server requests it
+
+ReproSchema Tools
+- Python and JavaScript tools
+- Validate ReproSchema elements
+- Enable conversion between different representations
+
+## Who can Reproschema do?
+- You can use assessments from the ReproSchema Library, convert RedCap activities, or submit new ones to the library
+- Use multilingual assessments and extend language support for existing assessments relatively easily
+- Create yourown versioned data collection protocol on your own GitHub repo
+- Create data using a brower on a computer, tablet, or smartphone 
+
+At a high level, on the client a participant or developer can interact with the UI from their computer, tablet, or smartphone. The specific assesment will be pulled to the client side from GitHub. The client data can be saved locally or send to the server at a lab or institution if the client gives permission and the server requests the data.
+
+On the server, study protocols can be hosted on GitHub anywhere. Each of them can deploy these client-based collection via Continuous Integration to GitHub. This is linked back to the ReproNim reproschema and reproschema-library Github repositories.
+
+## Who is Reproschema for?
+
+**🛠 Work in progress 🛠**
+
+
 ## What is the semantic web?
 
 When you request access to a certain document by clicking on a hyperlink, the computer will give a visual rendering of the html code of this document. But computer used to do that in pretty "silly" fashion: it would give you a human-readable version of the content, but the computer would not make the distinction if a certain element in the webpage (for example a paragraph) was referring to a person or a place or a song.
@@ -146,13 +198,6 @@ The Reproschema is also used to develop a checklist to [improve methods and resu
 
 **🛠 Work in progress 🛠**
 
-## Why should I use Reproschema?
-
-**🛠 Work in progress 🛠**
-
-## Who is Reproschema for?
-
-**🛠 Work in progress 🛠**
 
 ## How can I know if a certain property is supported by Reproschema?
 
